@@ -69,8 +69,8 @@ desafiopratico
 
 # CI e Relatório
 
-- Confira a execução dos testes [aqui]()
-- Confira o relatório com o resultado [aqui]()
+- Confira a execução dos testes [aqui](https://github.com/Brunafer/desafio-picpay/actions/workflows/main.yml)
+- Confira o relatório com o resultado [aqui](https://brunafer.github.io/desafio-picpay/index.html)
 
 ---
 Feito com ❤️ por Bruna Fernandes 👋 Entre em contato!
