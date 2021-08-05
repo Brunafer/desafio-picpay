@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2021-08-05T01:11:13.523Z",
-    "end": "2021-08-05T01:11:16.689Z",
-    "duration": 3166,
+    "start": "2021-08-05T01:19:11.504Z",
+    "end": "2021-08-05T01:19:14.538Z",
+    "duration": 3034,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3f9c8405-e350-494e-8acd-839e98990606",
+      "uuid": "532c7e02-a64c-4b2a-bc6f-aea78d88a361",
       "title": "",
       "fullFile": "cypress/integration/users.spec.js",
       "file": "cypress/integration/users.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d6153187-08d7-4445-9709-9149af292fdc",
+          "uuid": "6de4d187-d5ef-4dd7-8304-351df7070096",
           "title": "Usuários",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Quando criar um novo usuário, então ele deve ser listado com os demais",
               "fullTitle": "Usuários Quando criar um novo usuário, então ele deve ser listado com os demais",
               "timedOut": null,
-              "duration": 1539,
+              "duration": 1474,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "_request.default.postUsers().then(postUsersResponse => {\n  _assertions.default.shouldHaveStatus(postUsersResponse, 200);\n  _assertions.default.shouldUsersIdNotNull(postUsersResponse);\n  _assertions.default.shouldDurationBeFast(postUsersResponse);\n  _request.default.getAllUsers(postUsersResponse).then(getAllUsersresponse => {\n    _assertions.default.shouldUsersEmailExists(postUsersResponse.body.data.email, getAllUsersresponse);\n  });\n});",
               "err": {},
-              "uuid": "a26299ff-83bb-4d60-b901-e43b96c5575c",
-              "parentUUID": "d6153187-08d7-4445-9709-9149af292fdc",
+              "uuid": "e689a63b-e0db-4f36-b158-b0d31c952517",
+              "parentUUID": "6de4d187-d5ef-4dd7-8304-351df7070096",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Ao alterar um usuário com sucesso, então seus dados devem ser atualizados",
               "fullTitle": "Usuários Ao alterar um usuário com sucesso, então seus dados devem ser atualizados",
               "timedOut": null,
-              "duration": 794,
+              "duration": 757,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "_request.default.postUsers().then(postUsersResponse => {\n  _request.default.updateUser(postUsersResponse).then(putUserResponse => {\n    _assertions.default.shouldHaveStatus(putUserResponse, 200);\n    _assertions.default.shouldUserDataBeUpdated(putUserResponse);\n    _request.default.getSingleUser(postUsersResponse).then(getSingleUserResponse => {\n      _assertions.default.shouldHaveStatus(getSingleUserResponse, 200);\n      _assertions.default.shouldUsersIdNotNull(getSingleUserResponse);\n      _assertions.default.shouldUserDataBeUpdated(getSingleUserResponse);\n    });\n  });\n});",
               "err": {},
-              "uuid": "281d798c-9f01-40b5-8494-b2602b66f63d",
-              "parentUUID": "d6153187-08d7-4445-9709-9149af292fdc",
+              "uuid": "2120385f-20ff-497a-89d8-f43f375049ee",
+              "parentUUID": "6de4d187-d5ef-4dd7-8304-351df7070096",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Ao excluir um usuário, então ele não deve ser exibido na listagem de usuários",
               "fullTitle": "Usuários Ao excluir um usuário, então ele não deve ser exibido na listagem de usuários",
               "timedOut": null,
-              "duration": 800,
+              "duration": 762,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "_request.default.postUsers().then(postUsersResponse => {\n  _assertions.default.shouldHaveStatus(postUsersResponse, 200);\n  _assertions.default.shouldUsersIdNotNull(postUsersResponse);\n  _assertions.default.shouldDurationBeFast(postUsersResponse);\n  _request.default.deleteUser(postUsersResponse).then(deleteUserResponse => {\n    _assertions.default.shouldHaveStatus(deleteUserResponse, 200);\n    _request.default.getAllUsers(postUsersResponse).then(getAllUsersResponse => {\n      _assertions.default.shouldListBeEmpty(getAllUsersResponse);\n    });\n  });\n});",
               "err": {},
-              "uuid": "ad00612c-515f-4c1f-8f8b-93a69f540bcb",
-              "parentUUID": "d6153187-08d7-4445-9709-9149af292fdc",
+              "uuid": "3e9cce46-d802-41dc-9320-95cd09bf97a5",
+              "parentUUID": "6de4d187-d5ef-4dd7-8304-351df7070096",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a26299ff-83bb-4d60-b901-e43b96c5575c",
-            "281d798c-9f01-40b5-8494-b2602b66f63d",
-            "ad00612c-515f-4c1f-8f8b-93a69f540bcb"
+            "e689a63b-e0db-4f36-b158-b0d31c952517",
+            "2120385f-20ff-497a-89d8-f43f375049ee",
+            "3e9cce46-d802-41dc-9320-95cd09bf97a5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3133,
+          "duration": 2993,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
