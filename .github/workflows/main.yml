@@ -1,0 +1,27 @@
+name: CI
+'on':
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: null
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 14.x
+      - run: npm install
+      - run: 'npm run cy:run'
+      - run: 'npm run report:mocha'
+      - name: Deploy to GithubPages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          BRANCH: gh-pages
+          FOLDER: cypress/mochawesome-report
