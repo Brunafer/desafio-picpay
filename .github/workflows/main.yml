@@ -18,6 +18,7 @@ jobs:
           node-version: 14.x
       - run: npm install
       - run: 'npm run cy:run'
+      - run: 'npm run report:merge'
       - run: 'npm run report:mocha'
       - name: Deploy to GithubPages
         uses: JamesIves/github-pages-deploy-action@4.1.4
