@@ -2,6 +2,11 @@
  Implementação do desafio prático para a vaga de Quality Engineer
  
  <img src="https://github.com/Brunafer/desafio-picpay/blob/main/demo.gif">
+ 
+# Execução dos testes no CI e Relatório publicado no GHPages
+
+- Confira a execução dos testes [aqui](https://github.com/Brunafer/desafio-picpay/actions/workflows/main.yml)
+- Confira o relatório com o resultado [aqui](https://brunafer.github.io/desafio-picpay/index.html)
 
 # Introdução e testes executados
 
@@ -67,10 +72,6 @@ desafiopratico
 - Boas práticas de configuração e reuso de código
 - CI com GitHub Actions
 
-# CI e Relatório
-
-- Confira a execução dos testes [aqui](https://github.com/Brunafer/desafio-picpay/actions/workflows/main.yml)
-- Confira o relatório com o resultado [aqui](https://brunafer.github.io/desafio-picpay/index.html)
 
 ---
 Feito com ❤️ por Bruna Fernandes 👋 Entre em contato!
