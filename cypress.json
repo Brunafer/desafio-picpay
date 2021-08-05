@@ -1,8 +1,6 @@
 {
     "baseUrl": "https://gorest.co.in/public-api",
-    "experimentalSourceRewriting": true,
     "watchForFileChanges": false,
-    "testFiles": "**/*.*spec.*",
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
         "configFile": "reporter-config.json"
