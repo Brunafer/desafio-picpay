@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-05T01:09:44.143Z",
+    "end": "2021-08-05T01:09:47.175Z",
+    "duration": 3032,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "21c9c0fb-9ba0-4320-9af7-8bf633a69379",
+      "title": "",
+      "fullFile": "cypress/integration/users.spec.js",
+      "file": "cypress/integration/users.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1171b645-e7ec-4fb0-98ad-06260a42a5dd",
+          "title": "Usuários",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando criar um novo usuário, então ele deve ser listado com os demais",
+              "fullTitle": "Usuários Quando criar um novo usuário, então ele deve ser listado com os demais",
+              "timedOut": null,
+              "duration": 1466,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_request.default.postUsers().then(postUsersResponse => {\n  _assertions.default.shouldHaveStatus(postUsersResponse, 200);\n  _assertions.default.shouldUsersIdNotNull(postUsersResponse);\n  _assertions.default.shouldDurationBeFast(postUsersResponse);\n  _request.default.getAllUsers(postUsersResponse).then(getAllUsersresponse => {\n    _assertions.default.shouldUsersEmailExists(postUsersResponse.body.data.email, getAllUsersresponse);\n  });\n});",
+              "err": {},
+              "uuid": "456ba1d1-7bcb-433d-a294-e5b4dbe91193",
+              "parentUUID": "1171b645-e7ec-4fb0-98ad-06260a42a5dd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao alterar um usuário com sucesso, então seus dados devem ser atualizados",
+              "fullTitle": "Usuários Ao alterar um usuário com sucesso, então seus dados devem ser atualizados",
+              "timedOut": null,
+              "duration": 767,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_request.default.postUsers().then(postUsersResponse => {\n  _request.default.updateUser(postUsersResponse).then(putUserResponse => {\n    _assertions.default.shouldHaveStatus(putUserResponse, 200);\n    _assertions.default.shouldUserDataBeUpdated(putUserResponse);\n    _request.default.getSingleUser(postUsersResponse).then(getSingleUserResponse => {\n      _assertions.default.shouldHaveStatus(getSingleUserResponse, 200);\n      _assertions.default.shouldUsersIdNotNull(getSingleUserResponse);\n      _assertions.default.shouldUserDataBeUpdated(getSingleUserResponse);\n    });\n  });\n});",
+              "err": {},
+              "uuid": "a083c6a4-b36e-41ec-b709-a01bbc8d9528",
+              "parentUUID": "1171b645-e7ec-4fb0-98ad-06260a42a5dd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao excluir um usuário, então ele não deve ser exibido na listagem de usuários",
+              "fullTitle": "Usuários Ao excluir um usuário, então ele não deve ser exibido na listagem de usuários",
+              "timedOut": null,
+              "duration": 742,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_request.default.postUsers().then(postUsersResponse => {\n  _assertions.default.shouldHaveStatus(postUsersResponse, 200);\n  _assertions.default.shouldUsersIdNotNull(postUsersResponse);\n  _assertions.default.shouldDurationBeFast(postUsersResponse);\n  _request.default.deleteUser(postUsersResponse).then(deleteUserResponse => {\n    _assertions.default.shouldHaveStatus(deleteUserResponse, 200);\n    _request.default.getAllUsers(postUsersResponse).then(getAllUsersResponse => {\n      _assertions.default.shouldListBeEmpty(getAllUsersResponse);\n    });\n  });\n});",
+              "err": {},
+              "uuid": "f619e431-2633-4e08-8dff-7d4b46b20d58",
+              "parentUUID": "1171b645-e7ec-4fb0-98ad-06260a42a5dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "456ba1d1-7bcb-433d-a294-e5b4dbe91193",
+            "a083c6a4-b36e-41ec-b709-a01bbc8d9528",
+            "f619e431-2633-4e08-8dff-7d4b46b20d58"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2975,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
