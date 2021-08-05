@@ -1,0 +1,15 @@
+# dependencias
+node_modules
+package-lock.json
+
+
+# videos
+cypress/videos
+cypress/screenshots
+
+# outros
+.DS_Store
+
+# report
+mochawesome-report
+index.json

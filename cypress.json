@@ -1,0 +1,13 @@
+{
+    "baseUrl": "https://gorest.co.in/public-api",
+    "experimentalSourceRewriting": true,
+    "watchForFileChanges": false,
+    "testFiles": "**/*.*spec.*",
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    },
+    "env": {
+        "API_KEY":  "Bearer 24c692c8ea4799feab5b1c4be1602abdfdaa737e5874c806f8aa0686c449a1e4"
+    }
+}
